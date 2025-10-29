@@ -1,13 +1,17 @@
+const { sendErrorResponse } = require("../utils/response");
+
 const getAllUsers = (req, res) => {
-  res.send("Fetching all users");
+  sendErrorResponse(res, "Fetching all users");
 };
 
 const addNewUser = (req, res) => {
-  res.send("Adding a new user");
+  // res.send("Adding a new user");
+  sendErrorResponse(res, "Adding a new user");
 };
 
 const getASingleUser = (req, res) => {
-  res.send(`Fetching user with ID: ${req.params.id}`);
+  const mess = `Fetching user with ID: ${req.params.id}`;
+  sendErrorResponse(res, mess);
 };
 
 module.exports = {

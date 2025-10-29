@@ -1,9 +1,18 @@
+const { sendErrorResponse } = require("../utils/response");
+
 const getCartForASpecificUser = (req, res) => {
-  res.send(`Fetching cart for user with ID: ${req.params.userId}`);
+  // res.send(`Fetching cart for user with ID: ${req.params.userId}`);
+  sendErrorResponse(
+    res,
+    `Fetching cart for user with ID: ${req.params.userId}`
+  );
 };
 
 const addProductToCartWithSpecificUserId = (req, res) => {
-  res.send(`Adding product to cart for user with ID: ${req.params.userId}`);
+  sendErrorResponse(
+    res,
+    `Adding product to cart for user with ID: ${req.params.userId}`
+  );
 };
 
 module.exports = {
